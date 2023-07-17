@@ -21,5 +21,5 @@
             systemctl enable docker
           become: yes
         - name: Run image docker
-          shell: docker run -it --rm -d -p 8080:80 --name web nginx
+          shell: docker run -it --rm -d -p 80:80 --name web nginx
           become: yes
