@@ -1,8 +1,8 @@
 ---
-    - name: Provision Web Servers
+    - name: Provision vm
       hosts: apache
       tasks:
-        - name: Install pip3
+        - name: Install python
           apt:
             update_cache: yes
             name: python3-pip
@@ -15,7 +15,7 @@
           apt:
             name: docker.io
           become: yes
-        - name: Start Docker
+        - name: Start Docker service
           shell: |
             systemctl start docker
             systemctl enable docker
@@ -26,4 +26,3 @@
         - name: Run image
           shell: docker run -d --name apache -p 80:80 httpd
           become: yes
-
