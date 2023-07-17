@@ -3,7 +3,7 @@
       hosts: nginx
       tasks:
     
-        - name: Install pip3
+        - name: Install python
           apt:
             update_cache: yes
             name: python3-pip
@@ -19,13 +19,12 @@
             name: docker.io
           become: yes
     
-        - name: Start Docker
+        - name: Start Docker service
           shell: |
             systemctl start docker
             systemctl enable docker
           become: yes
 
-        - name: Run image
+        - name: Run image docker
           shell: docker run --name hello -dit -p 80:80 -p 443:443 scottyfullstack/nginx-static
           become: yes
-
