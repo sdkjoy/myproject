@@ -21,7 +21,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :inline => "cat /home/vagrant/.ssh/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys", run: "always"
 
   #config.disksize.size = '20GB'
-
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
     v.cpus = 1
