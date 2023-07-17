@@ -1,6 +1,6 @@
 ---
     - name: Provision Web Servers
-      hosts: 192.168.0.20
+      hosts: nginx
       tasks:
     
         - name: Install pip3
