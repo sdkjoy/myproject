@@ -1,2 +1,2 @@
 # Игнорируется папка при выполнение "vagrant up"
-vagrant
+.vagrant/
