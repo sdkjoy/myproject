@@ -5,7 +5,6 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  # https://vagrantcloud.com/ubuntu
   config.vm.box = "ubuntu/jammy64"
   config.vm.box_check_update = false
   
@@ -53,5 +52,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #config.vm.provision "shell", inline: "sudo mkdir -p /home/datsyuk/.ssh"
   #config.vm.provision "file", source: "#{ ssh_key_path + 'id_rsa' }", destination: "/home/datsyuk/.ssh/id_rsa"
   #config.vm.provision "file", source: "#{ ssh_key_path + 'id_rsa.pub' }", destination: "/home/datsyuk/.ssh/id_rsa.pub"
-
 end
