@@ -4,4 +4,4 @@ Ansible [core 2.12.10]
 VirtualBox Version 6.1.44 r156814
 Vagrant 2.2.19    
 vagrant plugin list:                                                                                                          
-vagrant-vbguest (0.31.0, global)    
+vagrant-vbguest
