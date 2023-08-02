@@ -10,3 +10,4 @@ vagrant-vbguest
 vagrant up  
 edit hosts  
 ansible-playbook -i hosts nginx.yml  
+ansible-playbook -i hosts apache.yml
